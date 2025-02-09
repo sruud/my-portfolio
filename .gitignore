@@ -35,3 +35,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore any public dot files
+public/.*
