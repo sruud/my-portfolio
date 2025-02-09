@@ -6,7 +6,7 @@ export default function Projects() {
       name: "Effective Collective Project",
       description:
         "Effective Collective is a user-friendly, Web3 solution, for voicing and voting within organizations and governments.",
-      image: "", // Replace with actual image
+      image: "/devfolio.png",
       github: "https://github.com/marcbal77/effective-collective",
       devfolio: "https://devfolio.co/projects/effective-collective-c920",
       tech: [
@@ -29,9 +29,7 @@ export default function Projects() {
       description:
         "This POAP certifies that the individual has successfully participated and completed all the tasks in the Chainlink Bootcamp on April 2024, for 20 hours in 10 days and two weeks.",
       altText: "Participants learned: ",
-      //   image: "https://assets.poap.xyz/b7c2176d-f68a-451b-939e-f21f03576495.png",
-      //   image: "/Chainlink_Certificate.png",
-      image: "",
+      image: "/chainlink_cert.png",
       drop: "https://poap.gallery/drops/174346",
       poap: "https://collectors.poap.xyz/token/7138695",
       tech: [
