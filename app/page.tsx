@@ -6,7 +6,7 @@ export default function Page() {
       <div className="intro flex items-center space-x-6">
         {/* Add Picture */}
         <img
-          src="https://github.com/sruud.png"
+          src="/gh_profile.jpg"
           alt="Steven Ruud"
           className="w-40 h-40 rounded-full border-4 border-pink-500 shadow-[0_0_15px_5px_rgba(255,20,147,0.8)]"
         />

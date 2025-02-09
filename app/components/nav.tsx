@@ -1,16 +1,27 @@
-import Link from 'next/link'
+import Link from "next/link";
 
+// about skills projects contact
 const navItems = {
-  '/': {
-    name: 'home',
+  "/": {
+    // name: 'home',
+    name: "about",
   },
-  '/blog': {
-    name: 'blog',
+  "/skills": {
+    name: "skills",
   },
-  'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-    name: 'deploy',
+  "/projects": {
+    name: "projects",
   },
-}
+  "/contact": {
+    name: "contact",
+  },
+  // "/blog": {
+  //   name: "blog",
+  // },
+  // "https://vercel.com/templates/next.js/portfolio-starter-kit": {
+  //   name: "deploy",
+  // },
+};
 
 export function Navbar() {
   return (
@@ -30,11 +41,11 @@ export function Navbar() {
                 >
                   {name}
                 </Link>
-              )
+              );
             })}
           </div>
         </nav>
       </div>
     </aside>
-  )
+  );
 }
