@@ -1,5 +1,6 @@
 import { BlogPosts } from "app/components/posts";
 import Intro from "./components/Intro";
+import AboutMe from "./components/AboutMe";
 
 export default function Page() {
   return (
@@ -24,6 +25,31 @@ export default function Page() {
             and user needs.`}
       </p> */}
       <Intro />
+      <AboutMe />
+      {/* Skills */}
+      <section className="max-w-4xl px-6 py-8">
+        <h2 className="text-3xl font-bold mb-6 text-left">Skills</h2>
+        <div
+          id="skills-container"
+          className="grid grid-cols-3 gap-6 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 text-3xl text-gray-300 justify-items-center"
+        >
+          <i className="fa-brands fa-react text-blue-400 text-2xl hover:text-gray-400"></i>
+          {/* <i className="fa-brands fa-ts text-blue-400 text-2xl hover:text-gray-400"></i> */}
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+            alt="TypeScript"
+            className="w-8 h-8 hover:opacity-80"
+          />
+        </div>
+      </section>
+      {/* Projects */}
+      <section className="max-w-4xl px-6 py-8">
+        <h2 className="text-3xl font-bold mb-6 text-left">Projects</h2>
+      </section>
+      {/* Contact put at the bottom remove blog and footer */}
+      <section className="max-w-4xl px-6 py-8">
+        <h2 className="text-3xl font-bold mb-6 text-left">Contact</h2>
+      </section>
       <div className="my-8">
         <BlogPosts />
       </div>
