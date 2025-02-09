@@ -1,9 +1,7 @@
 import Link from "next/link";
 
-// about skills projects contact
 const navItems = {
   "/": {
-    // name: 'home',
     name: "about",
   },
   "/skills": {
@@ -15,12 +13,6 @@ const navItems = {
   "/contact": {
     name: "contact",
   },
-  // "/blog": {
-  //   name: "blog",
-  // },
-  // "https://vercel.com/templates/next.js/portfolio-starter-kit": {
-  //   name: "deploy",
-  // },
 };
 
 export function Navbar() {
