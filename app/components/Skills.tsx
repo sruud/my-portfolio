@@ -1,5 +1,6 @@
 export default function Skills() {
   return (
+    //   TODO add tool tip to icons - clean this up
     // <section id="skills" className="max-w-4xl mx-auto px-6 py-16">
     //   <h2 className="text-3xl font-bold mb-6 text-left">Skills</h2>
     //   <div

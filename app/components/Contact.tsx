@@ -3,7 +3,7 @@ export default function Contact() {
     <section id="contact" className="max-w-4xl px-6 py-8">
       <h2 className="text-3xl font-bold mb-6 text-left">Contact Me</h2>
       <div
-        id="socials-container"
+        id="contact-container"
         className="grid grid-cols-3 gap-6 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 text-3xl text-gray-300 justify-items-center"
       >
         <a

@@ -5,9 +5,7 @@ import { GeistMono } from "geist/font/mono";
 import { Navbar } from "./components/nav";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Footer from "./components/footer";
 import { baseUrl } from "./sitemap";
-import Intro from "./components/Intro";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -16,7 +14,6 @@ export const metadata: Metadata = {
     template: "%s | Next.js Portfolio Starter",
   },
   description: "This is my portfolio.",
-  // Do I need this
   openGraph: {
     title: "My Portfolio",
     description: "This is my portfolio.",
@@ -70,9 +67,6 @@ export default function RootLayout({
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
           {children}
-          {/* <Intro /> */}
-          {/* ^ This belongs in Page */}
-          <Footer />
           <Analytics />
           <SpeedInsights />
         </main>
