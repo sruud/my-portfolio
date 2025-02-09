@@ -1,4 +1,4 @@
-import { BlogPosts } from "app/components/posts";
+// import { BlogPosts } from "app/components/posts";
 import Intro from "./components/Intro";
 import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
