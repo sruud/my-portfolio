@@ -2,9 +2,15 @@ export default function Contact() {
   return (
     <section id="contact" className="max-w-4xl px-6 py-8">
       <h2 className="text-3xl font-bold mb-6 text-left">Contact Me</h2>
+      <p className="text-gray-300">
+        I’m always open to new opportunities and exciting challenges.
+        {/* <a href="#looking-for" className="text-blue-400 hover:underline ml-2">
+          Learn more about what I’m looking for →
+        </a> */}
+      </p>
       <div
         id="contact-container"
-        className="grid grid-cols-3 gap-6 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 text-3xl text-gray-300 justify-items-center"
+        className="grid grid-cols-3 gap-6 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 text-3xl text-gray-300 justify-items-center mt-6"
       >
         <a
           href="https://github.com/sruud"
