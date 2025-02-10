@@ -1,17 +1,6 @@
 export default function Skills() {
   const skills = [
     { name: "React", iconClass: "fa-brands fa-react", color: "text-blue-400" },
-    { name: "CSS3", iconClass: "fa-brands fa-css3-alt" },
-    {
-      name: "HTML5",
-      iconClass: "fa-brands fa-html5",
-      color: "text-orange-500",
-    },
-    {
-      name: "CSS3",
-      iconClass: "fa-brands fa-css3-alt",
-      color: "text-blue-500",
-    },
     {
       name: "TypeScript",
       imgSrc:
@@ -22,6 +11,17 @@ export default function Skills() {
       iconClass: "fa-brands fa-js",
       color: "text-yellow-400",
     },
+    {
+      name: "HTML5",
+      iconClass: "fa-brands fa-html5",
+      color: "text-orange-500",
+    },
+    {
+      name: "CSS3",
+      iconClass: "fa-brands fa-css3-alt",
+      color: "text-blue-500",
+    },
+
     { name: "SASS", iconClass: "fa-brands fa-sass", color: "text-pink-500" },
     {
       name: "Node.js",
@@ -82,7 +82,7 @@ export default function Skills() {
       iconClass: "fa-solid fa-mobile-screen",
       color: "text-gray-500",
     },
-    { name: "Apple", iconClass: "fa-brands fa-apple", color: "text-gray-500" },
+    { name: "macOS", iconClass: "fa-brands fa-apple", color: "text-gray-500" },
     {
       name: "Windows",
       iconClass: "fa-brands fa-windows",
