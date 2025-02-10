@@ -12,7 +12,6 @@ export default function Skills() {
       iconClass: "fa-brands fa-css3-alt",
       color: "text-blue-500",
     },
-    // Check if want to use this or not
     {
       name: "TypeScript",
       imgSrc:
