@@ -8,10 +8,7 @@ export default function Intro() {
           alt="Steven Ruud"
           className="w-40 h-40 rounded-full border-4 border-pink-500 shadow-[0_0_15px_5px_rgba(255,20,147,0.8)]"
         />
-
-        {/* Name & Title Container */}
         <div className="flex flex-col">
-          {/* Name with SVG Text */}
           <svg
             width="300"
             height="80"
@@ -31,7 +28,6 @@ export default function Intro() {
             >
               Steven Ruud
             </text>
-            {/* Gradient Fill */}
             <defs>
               <linearGradient id="gradient" gradientTransform="rotate(90)">
                 <stop offset="0%" stopColor="cyan" />
@@ -39,8 +35,6 @@ export default function Intro() {
               </linearGradient>
             </defs>
           </svg>
-
-          {/* Title */}
           <h1 className="text-2xl sm:text-3xl font-bold text-white font-poppins">
             Web Developer & Software Engineer
           </h1>
