@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Link from "next/link";
 
-// Define types for navItems
 interface NavItemWithSubLinks {
   name: string;
   subLinks: { href: string; name: string }[];
@@ -18,6 +17,7 @@ const navItems: Record<string, NavItem> = {
   "#about": {
     name: "about",
     subLinks: [{ href: "#looking-for", name: "more" }],
+    // Next, Future, Vision - other ideas
     // subLinks: [{ href: "#looking-for", name: "What I'm Looking For" }],
     // Almost looks like a comment bubble
   },
