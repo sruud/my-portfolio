@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "next build && touch docs/.nojekyll && git add docs/ && git commit -m \"Deploy\" && git subtree push --prefix docs origin gh-pages"
   },
   "dependencies": {
     "@tailwindcss/postcss": "4.0.0-alpha.13",
