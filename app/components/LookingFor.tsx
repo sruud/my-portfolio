@@ -5,7 +5,6 @@ export default function LookingFor() {
       <section id="looking-for" className="max-w-4xl px-6 py-8">
         <div className="looking-for-container space-y-4">
           <h2 className="text-3xl font-bold mb-6 text-left">
-            {/* Things I'm Passionate About */}
             What I'm Looking For
           </h2>
           <div className="looking-for-text-container space-y-4">

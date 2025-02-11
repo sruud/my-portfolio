@@ -8,7 +8,7 @@ export default function Contact() {
           {/* <a href="#looking-for" className="text-blue-400 hover:underline ml-2">
       Learn more about what I’m looking for →
     </a> */}
-          {/* Provide email? */}
+          {/* TODO Provide email? */}
         </p>
       </section>
       <section>

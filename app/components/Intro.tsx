@@ -1,8 +1,6 @@
 export default function Intro() {
   return (
     <section id="intro" className="max-w-4xl py-16 px-6">
-      {/* Issue on smaller devices iphone xr */}
-      {/* <div className="intro flex items-center space-x-6"> */}
       <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start">
         {/* GitHub Logo */}
         <img
@@ -12,14 +10,7 @@ export default function Intro() {
         />
 
         {/* Name & Title Container */}
-        {/* Issue on smaller devices iphone xr */}
-        {/* Need to try flex wrap flex directiion: column  */}
-        {/* <div className="flex flex-col"> */}
-        {/* orignial ^ */}
-        {/* <div className="flex flex-col flex-wrap"> */}
-        {/* study this one */}
         <div className="mx-auto flex w-full max-w-[90%] flex-col items-center text-center sm:max-w-[75%] md:max-w-[60%] lg:max-w-[50%]">
-          {/* Name with SVG Text */}
           <svg
             width="300"
             height="80"
@@ -48,9 +39,6 @@ export default function Intro() {
           </svg>
 
           {/* Title */}
-          {/* Kind of weird prob try and center items */}
-          {/* <h1 className="text-2xl sm:text-3xl font-bold text-white font-poppins"> */}
-          {/* testing this */}
           <h1 className="font-poppins text-2xl font-bold leading-tight text-white sm:text-3xl">
             Web Developer & Software Engineer
           </h1>
