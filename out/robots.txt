@@ -1,0 +1,3 @@
+User-Agent: *
+
+Sitemap: https://sruud.github.io/my-portfolio/sitemap.xml
