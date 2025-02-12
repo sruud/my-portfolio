@@ -12,7 +12,8 @@
 /.next/
 # comment out to test gh pages deploy
 # /out/
-# /docs/
+# /out/*
+# !/out/.nojekyll
 
 # production
 /build
