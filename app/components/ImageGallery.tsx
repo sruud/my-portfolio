@@ -19,8 +19,8 @@ export default function ImageGallery() {
         {images.map((src, index) => (
           <img
             key={index}
-            src={src}
-            alt={`Eye Candy ${index + 1}`}
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${src}`}
+            alt={`Image ${index + 1}`}
             className="h-auto w-full rounded-lg shadow-md transition-transform duration-300 hover:scale-110"
           />
         ))}
