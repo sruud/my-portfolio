@@ -42,7 +42,7 @@ export function Navbar() {
               <>
                 <button
                   type="button"
-                  className="inline-flex w-full justify-center gap-x-1.5 rounded-md text-neutral-200 px-3 py-2 text-sm shadow-xs"
+                  className="inline-flex w-full justify-center gap-x-1.5 rounded-md text-neutral-200 px-3 py-2 text-lg shadow-xs"
                   id="menu-button"
                   aria-expanded={isDropdownOpen ? "true" : "false"}
                   aria-haspopup="true"
@@ -50,7 +50,7 @@ export function Navbar() {
                 >
                   {item.name}
                   <svg
-                    className={`size-5 text-gray-400 transition-transform duration-200 ${
+                    className={`w-5 h-7  text-gray-400 transition-transform duration-200 ${
                       isDropdownOpen ? "rotate-180" : "rotate-0"
                     }`}
                     viewBox="0 0 20 20"
@@ -78,7 +78,7 @@ export function Navbar() {
                         <Link
                           key={subLink.href}
                           href={subLink.href}
-                          className="block px-4 py-2 text-neutral-900 dark:text-white text-sm hover:bg-gray-700 hover:text-white rounded-2xl"
+                          className="block px-4 py-2 text-neutral-900 dark:text-white text-lg hover:bg-gray-700 hover:text-white rounded-2xl"
                           role="menuitem"
                           tabIndex={-1}
                         >
@@ -90,7 +90,7 @@ export function Navbar() {
                 )}
               </>
             ) : (
-              <Link key={href} href={href} className="block px-4 py-2 text-sm">
+              <Link key={href} href={href} className="block px-4 py-2 text-lg">
                 {item.name}
               </Link>
             )}
