@@ -34,7 +34,9 @@ export function Navbar() {
   };
 
   return (
-    <nav className="flex space-x-4">
+    // nav is 44px tall - changed in global css
+    // TODO make dropdown retract once more has been clicked
+    <nav className="sticky top-0 z-50 flex w-full space-x-4 bg-black">
       {Object.entries(navItems).map(([href, item]) => (
         <div key={href} className="relative inline-block text-left">
           <div>
@@ -42,7 +44,7 @@ export function Navbar() {
               <>
                 <button
                   type="button"
-                  className="inline-flex w-full justify-center gap-x-1.5 rounded-md text-neutral-200 px-3 py-2 text-lg shadow-xs"
+                  className="inline-flex w-full justify-center gap-x-1.5 rounded-md py-2 px-3 text-lg text-neutral-200 shadow-xs"
                   id="menu-button"
                   aria-expanded={isDropdownOpen ? "true" : "false"}
                   aria-haspopup="true"
@@ -50,7 +52,7 @@ export function Navbar() {
                 >
                   {item.name}
                   <svg
-                    className={`w-5 h-7  text-gray-400 transition-transform duration-200 ${
+                    className={`h-7 w-5 text-gray-400 transition-transform duration-200 ${
                       isDropdownOpen ? "rotate-180" : "rotate-0"
                     }`}
                     viewBox="0 0 20 20"
@@ -66,8 +68,9 @@ export function Navbar() {
                 </button>
 
                 {isDropdownOpen && (
+                  // mt-2
                   <div
-                    className="absolute right-0 z-10 mt-2 w-full origin-top-right"
+                    className="absolute right-0 z-10 w-full origin-top-right bg-black"
                     role="menu"
                     aria-orientation="vertical"
                     aria-labelledby="menu-button"
@@ -78,7 +81,7 @@ export function Navbar() {
                         <Link
                           key={subLink.href}
                           href={subLink.href}
-                          className="block px-4 py-2 text-neutral-900 dark:text-white text-lg hover:bg-gray-700 hover:text-white rounded-2xl"
+                          className="block rounded-2xl py-2 px-4 text-lg text-neutral-900 hover:bg-gray-700 hover:text-white dark:text-white"
                           role="menuitem"
                           tabIndex={-1}
                         >
@@ -90,7 +93,7 @@ export function Navbar() {
                 )}
               </>
             ) : (
-              <Link key={href} href={href} className="block px-4 py-2 text-lg">
+              <Link key={href} href={href} className="block py-2 px-4 text-lg">
                 {item.name}
               </Link>
             )}
