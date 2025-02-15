@@ -2,9 +2,9 @@ import Image from "next/image";
 export default function LookingFor() {
   return (
     <>
-      <section id="looking-for" className="max-w-4xl px-6 py-8">
+      <section id="looking-for" className="max-w-4xl py-8 px-6">
         <div className="looking-for-container space-y-4">
-          <h2 className="text-3xl font-bold mb-6 text-left">
+          <h2 className="mb-6 text-left text-3xl font-bold">
             What I'm Looking For
           </h2>
           <div className="looking-for-text-container space-y-4">
@@ -29,7 +29,7 @@ export default function LookingFor() {
           </div>
         </div>
       </section>
-      <section className="max-w-4xl px-6 py-8">
+      <section className="max-w-4xl py-8 px-6">
         <Image
           src="/steve_and_frens.jpg"
           alt="Steve and dog coworkers"
