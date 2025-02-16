@@ -16,10 +16,11 @@ type NavItem = NavItemWithSubLinks | NavItemWithoutSubLinks;
 const navItems: Record<string, NavItem> = {
   "#about": {
     name: "about",
-    subLinks: [{ href: "#looking-for", name: "more" }],
-    // Next, Future, Vision - other ideas
-    // subLinks: [{ href: "#looking-for", name: "What I'm Looking For" }],
-    // Almost looks like a comment bubble
+    subLinks: [
+      { href: "/", name: "me" }, // just go to the top
+      // { href: "#about", name: "me" },
+      { href: "#looking-for", name: "vision" },
+    ],
   },
   "#skills": { name: "skills" },
   "#projects": { name: "projects" },
@@ -33,12 +34,18 @@ export function Navbar() {
     setIsDropdownOpen((prevState) => !prevState);
   };
 
+  const handleSubItemClick = (href: string) => {
+    setIsDropdownOpen(false);
+  };
+
   return (
-    // nav is 44px tall - changed in global css
-    // TODO make dropdown retract once more has been clicked
-    <nav className="sticky top-0 z-50 flex w-full space-x-4 bg-black">
+    <nav className="sticky top-0 z-50 flex w-full max-w-6xl space-x-4 bg-black">
       {Object.entries(navItems).map(([href, item]) => (
-        <div key={href} className="relative inline-block text-left">
+        <div
+          key={href}
+          className="relative inline-block text-left"
+          onMouseLeave={() => setIsDropdownOpen(false)}
+        >
           <div>
             {"subLinks" in item ? (
               <>
@@ -68,7 +75,7 @@ export function Navbar() {
                 </button>
 
                 {isDropdownOpen && (
-                  // mt-2
+                  // TODO accessibility
                   <div
                     className="absolute right-0 z-10 w-full origin-top-right bg-black"
                     role="menu"
@@ -84,6 +91,7 @@ export function Navbar() {
                           className="block rounded-2xl py-2 px-4 text-lg text-neutral-900 hover:bg-gray-700 hover:text-white dark:text-white"
                           role="menuitem"
                           tabIndex={-1}
+                          onClick={() => handleSubItemClick(subLink.href)}
                         >
                           {subLink.name}
                         </Link>
