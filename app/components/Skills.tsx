@@ -106,37 +106,37 @@ export default function Skills() {
     },
   ];
   return (
-    <section id="skills" className="max-w-4xl px-6 py-8">
-      <h2 className="text-3xl font-bold mb-6 text-left">Skills</h2>
+    <section id="skills" className="max-w-4xl py-8 px-6">
+      <h2 className="mb-6 text-left text-3xl font-bold">Skills</h2>
 
       <div
         id="skills-container"
-        className="grid grid-cols-3 gap-8 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 text-3xl text-gray-300 justify-items-center"
+        className="grid grid-cols-3 justify-items-center gap-8 text-3xl text-gray-300 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8"
       >
         {skills.map((skill, index) =>
           skill.imgSrc ? (
-            <div key={index} className="relative group">
+            <div key={index} className="group relative">
               <img
                 key={index}
                 src={skill.imgSrc}
                 alt={skill.name}
-                className="w-8 h-8 hover:opacity-80"
+                className="h-8 w-8 hover:opacity-80"
               />
-              <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 scale-0 group-hover:scale-100 transition-transform bg-gray-800 text-white text-xs font-semibold px-2 py-1 rounded-md">
+              <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transform rounded-md bg-gray-800 py-1 px-2 text-xs font-semibold text-white transition-transform group-hover:scale-100">
                 {skill.name}
               </span>
             </div>
           ) : (
-            <div key={index} className="relative group">
+            <div key={index} className="group relative">
               <i
                 key={index}
                 className={`${skill.iconClass} ${skill.color} text-3xl hover:text-gray-400`}
               ></i>
-              <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 scale-0 group-hover:scale-100 transition-transform bg-gray-800 text-white text-xs font-semibold px-2 py-1 rounded-md">
+              <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 transform rounded-md bg-gray-800 py-1 px-2 text-xs font-semibold text-white transition-transform group-hover:scale-100">
                 {skill.name}
               </span>
             </div>
-          )
+          ),
         )}
       </div>
     </section>

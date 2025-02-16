@@ -13,7 +13,7 @@ export default function ImageGallery() {
   ];
 
   return (
-    <section className="max-w-6xl px-6 py-8 ">
+    <section className="max-w-6xl py-8 px-6">
       <div className="relative grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-5">
         <div className="absolute top-1/4 left-0 -z-10 h-7 w-full bg-[#2ff3e0] opacity-75"></div>
         {images.map((src, index) => (

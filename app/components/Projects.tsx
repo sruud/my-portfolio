@@ -47,30 +47,30 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="max-w-5xl mx-auto px-6 py-8">
-      <h2 className="text-3xl font-bold mb-6 text-left">Projects</h2>
+    <section id="projects" className="mx-auto max-w-5xl py-8 px-6">
+      <h2 className="mb-6 text-left text-3xl font-bold">Projects</h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-1 gap-8">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-1">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-800 text-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition"
+            className="rounded-lg bg-gray-800 p-6 text-white shadow-lg transition hover:shadow-2xl"
           >
             {/* Project Image */}
             {project.image && (
               <img
                 src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${project.image}`}
                 alt={project.name}
-                className="rounded-lg mb-4"
+                className="mb-4 rounded-lg"
               />
             )}
             {/* Project Name */}
             <h3 className="text-2xl font-semibold">{project.name}</h3>
 
             {/* Project Description */}
-            <p className="text-sm text-gray-300 mt-2">{project.description}</p>
+            <p className="mt-2 text-sm text-gray-300">{project.description}</p>
             {project.altText && (
-              <p className="text-sm text-gray-300 mt-2">{project.altText}</p>
+              <p className="mt-2 text-sm text-gray-300">{project.altText}</p>
             )}
 
             {/* GitHub Link */}
@@ -79,7 +79,7 @@ export default function Projects() {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 text-sm"
+                className="text-sm text-blue-400 hover:text-blue-300"
               >
                 View on GitHub
               </a>
@@ -90,7 +90,7 @@ export default function Projects() {
               {project.tech.map((tech, i) => (
                 <span
                   key={i}
-                  className="bg-gray-700 text-xs px-3 py-1 rounded-full"
+                  className="rounded-full bg-gray-700 py-1 px-3 text-xs"
                 >
                   {tech}
                 </span>
@@ -102,7 +102,7 @@ export default function Projects() {
                 href={project.devfolio}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg text-center"
+                className="mt-5 block rounded-lg bg-green-500 py-2 px-4 text-center font-semibold text-white hover:bg-green-600"
               >
                 View on Devfolio
               </a>
@@ -113,7 +113,7 @@ export default function Projects() {
                 // href={project.poap}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg text-center"
+                className="mt-5 block rounded-lg bg-green-500 py-2 px-4 text-center font-semibold text-white hover:bg-green-600"
               >
                 View POAP Details
               </a>

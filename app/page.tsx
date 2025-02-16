@@ -8,7 +8,7 @@ import LookingFor from "./components/LookingFor";
 
 export default function Page() {
   return (
-    <section className="relative min-h-screen flex flex-col text-white">
+    <section className="relative flex min-h-screen flex-col text-white">
       <Intro />
       <AboutMe />
       <Skills />

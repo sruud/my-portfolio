@@ -16,10 +16,10 @@ type NavItem = NavItemWithSubLinks | NavItemWithoutSubLinks;
 const navItems: Record<string, NavItem> = {
   "#about": {
     name: "about",
-    subLinks: [{ href: "#looking-for", name: "more" }],
-    // Next, Future, Vision - other ideas
-    // subLinks: [{ href: "#looking-for", name: "What I'm Looking For" }],
-    // Almost looks like a comment bubble
+    subLinks: [
+      { href: "/", name: "me" },
+      { href: "#looking-for", name: "vision" },
+    ],
   },
   "#skills": { name: "skills" },
   "#projects": { name: "projects" },
@@ -33,24 +33,33 @@ export function Navbar() {
     setIsDropdownOpen((prevState) => !prevState);
   };
 
+  const handleSubItemClick = (href: string) => {
+    setIsDropdownOpen(false);
+  };
+
   return (
-    <nav className="flex space-x-4">
+    <nav className="sticky top-0 z-50 flex w-full space-x-2 bg-black md:space-x-6 lg:space-x-8">
       {Object.entries(navItems).map(([href, item]) => (
-        <div key={href} className="relative inline-block text-left">
+        <div
+          key={href}
+          className="relative inline-block text-left"
+          onMouseLeave={() => setIsDropdownOpen(false)}
+        >
           <div>
             {"subLinks" in item ? (
               <>
                 <button
                   type="button"
-                  className="inline-flex w-full justify-center gap-x-1.5 rounded-md text-neutral-200 px-3 py-2 text-sm shadow-xs"
+                  className="inline-flex w-full justify-center gap-x-1.5 rounded-md py-2 px-3 text-lg text-neutral-200 shadow-xs"
                   id="menu-button"
                   aria-expanded={isDropdownOpen ? "true" : "false"}
                   aria-haspopup="true"
+                  tabIndex={0}
                   onClick={toggleDropdown}
                 >
                   {item.name}
                   <svg
-                    className={`size-5 text-gray-400 transition-transform duration-200 ${
+                    className={`h-7 w-5 text-gray-400 transition-transform duration-200 ${
                       isDropdownOpen ? "rotate-180" : "rotate-0"
                     }`}
                     viewBox="0 0 20 20"
@@ -67,7 +76,7 @@ export function Navbar() {
 
                 {isDropdownOpen && (
                   <div
-                    className="absolute right-0 z-10 mt-2 w-full origin-top-right"
+                    className="absolute right-0 z-10 w-full origin-top-right bg-black"
                     role="menu"
                     aria-orientation="vertical"
                     aria-labelledby="menu-button"
@@ -78,9 +87,10 @@ export function Navbar() {
                         <Link
                           key={subLink.href}
                           href={subLink.href}
-                          className="block px-4 py-2 text-neutral-900 dark:text-white text-sm hover:bg-gray-700 hover:text-white rounded-2xl"
+                          className="block rounded-2xl py-2 px-4 text-lg text-neutral-900 hover:bg-gray-700 hover:text-white dark:text-white"
                           role="menuitem"
-                          tabIndex={-1}
+                          tabIndex={0}
+                          onClick={() => handleSubItemClick(subLink.href)}
                         >
                           {subLink.name}
                         </Link>
@@ -90,7 +100,7 @@ export function Navbar() {
                 )}
               </>
             ) : (
-              <Link key={href} href={href} className="block px-4 py-2 text-sm">
+              <Link key={href} href={href} className="block py-2 px-4 text-lg">
                 {item.name}
               </Link>
             )}
