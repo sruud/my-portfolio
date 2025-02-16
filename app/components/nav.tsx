@@ -17,8 +17,7 @@ const navItems: Record<string, NavItem> = {
   "#about": {
     name: "about",
     subLinks: [
-      { href: "/", name: "me" }, // just go to the top
-      // { href: "#about", name: "me" },
+      { href: "/", name: "me" },
       { href: "#looking-for", name: "vision" },
     ],
   },
@@ -55,6 +54,7 @@ export function Navbar() {
                   id="menu-button"
                   aria-expanded={isDropdownOpen ? "true" : "false"}
                   aria-haspopup="true"
+                  tabIndex={0}
                   onClick={toggleDropdown}
                 >
                   {item.name}
@@ -75,7 +75,6 @@ export function Navbar() {
                 </button>
 
                 {isDropdownOpen && (
-                  // TODO accessibility
                   <div
                     className="absolute right-0 z-10 w-full origin-top-right bg-black"
                     role="menu"
@@ -90,7 +89,7 @@ export function Navbar() {
                           href={subLink.href}
                           className="block rounded-2xl py-2 px-4 text-lg text-neutral-900 hover:bg-gray-700 hover:text-white dark:text-white"
                           role="menuitem"
-                          tabIndex={-1}
+                          tabIndex={0}
                           onClick={() => handleSubItemClick(subLink.href)}
                         >
                           {subLink.name}
