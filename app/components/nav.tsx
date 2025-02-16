@@ -38,7 +38,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 flex w-full max-w-6xl space-x-4 bg-black">
+    <nav className="sticky top-0 z-50 flex w-full space-x-2 bg-black md:space-x-6 lg:space-x-8">
       {Object.entries(navItems).map(([href, item]) => (
         <div
           key={href}
