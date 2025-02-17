@@ -1,3 +1,5 @@
+import { prefix } from "utils/prefix";
+
 export default function ImageGallery() {
   const images = [
     "/coworker_steve.webp",
@@ -19,7 +21,7 @@ export default function ImageGallery() {
         {images.map((src, index) => (
           <img
             key={index}
-            src={src}
+            src={`${prefix}${src}`}
             alt={`Image ${index + 1}`}
             className="h-auto w-full rounded-lg shadow-md transition-transform duration-300 hover:scale-110"
           />
