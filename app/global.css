@@ -17,6 +17,12 @@
   --sh-entity: #e25a1c;
 }
 
+/* Default (Light Mode) */
+nav {
+  background-color: #fff; /* White background for light mode */
+  color: #000; /* Black text for light mode */
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --sh-class: #4c97f8;
@@ -26,6 +32,10 @@
   }
   html {
     color-scheme: dark;
+  }
+  nav {
+    background-color: #000; /* Black background for dark mode */
+    color: #fff; /* White text for dark mode */
   }
 }
 

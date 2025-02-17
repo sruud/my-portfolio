@@ -36,9 +36,10 @@ export function Navbar() {
   const handleSubItemClick = (href: string) => {
     setIsDropdownOpen(false);
   };
+  // TODO make dark light theme toggle
 
   return (
-    <nav className="sticky top-0 z-50 flex w-full space-x-2 bg-black md:space-x-6 lg:space-x-8">
+    <nav className="sticky top-0 z-50 flex w-full space-x-2 md:space-x-6 lg:space-x-8">
       {Object.entries(navItems).map(([href, item]) => (
         <div
           key={href}
@@ -50,7 +51,7 @@ export function Navbar() {
               <>
                 <button
                   type="button"
-                  className="inline-flex w-full justify-center gap-x-1.5 rounded-md py-2 px-3 text-lg text-neutral-200 shadow-xs"
+                  className="inline-flex w-full justify-center gap-x-1.5 rounded-md py-2 px-3 text-lg"
                   id="menu-button"
                   aria-expanded={isDropdownOpen ? "true" : "false"}
                   aria-haspopup="true"
@@ -59,7 +60,7 @@ export function Navbar() {
                 >
                   {item.name}
                   <svg
-                    className={`h-7 w-5 text-gray-400 transition-transform duration-200 ${
+                    className={`h-7 w-5 transition-transform duration-200 ${
                       isDropdownOpen ? "rotate-180" : "rotate-0"
                     }`}
                     viewBox="0 0 20 20"
@@ -76,7 +77,7 @@ export function Navbar() {
 
                 {isDropdownOpen && (
                   <div
-                    className="absolute right-0 z-10 w-full origin-top-right bg-black"
+                    className="absolute right-0 z-10 w-full origin-top-right bg-white dark:bg-black"
                     role="menu"
                     aria-orientation="vertical"
                     aria-labelledby="menu-button"
@@ -87,7 +88,9 @@ export function Navbar() {
                         <Link
                           key={subLink.href}
                           href={subLink.href}
-                          className="block rounded-2xl py-2 px-4 text-lg text-neutral-900 hover:bg-gray-700 hover:text-white dark:text-white"
+                          // text-neutral-900 hover:bg-gray-700 hover:text-white dark:text-white
+                          // className="block rounded-2xl py-2 px-4 text-lg"
+                          className="block rounded-2xl bg-white py-2 px-4 text-lg text-black shadow-lg hover:bg-gray-700 hover:text-white dark:bg-black dark:text-white"
                           role="menuitem"
                           tabIndex={0}
                           onClick={() => handleSubItemClick(subLink.href)}

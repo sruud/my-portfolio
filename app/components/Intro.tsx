@@ -39,7 +39,7 @@ export default function Intro() {
           </svg>
 
           {/* Title */}
-          <h1 className="font-poppins text-2xl font-bold leading-tight text-white sm:text-3xl">
+          <h1 className="font-poppins text-2xl font-bold leading-tight sm:text-3xl">
             Web Developer & Software Engineer
           </h1>
         </div>

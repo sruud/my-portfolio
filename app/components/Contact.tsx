@@ -3,7 +3,8 @@ export default function Contact() {
     <>
       <section id="contact" className="max-w-4xl py-8 px-6">
         <h2 className="mb-6 text-left text-3xl font-bold">Contact Me</h2>
-        <p className="text-gray-300">
+        {/* <p className="text-gray-300"> */}
+        <p>
           I’m always open to new opportunities and exciting challenges.
           {/* <a href="#looking-for" className="text-blue-400 hover:underline ml-2">
       Learn more about what I’m looking for →
@@ -21,7 +22,8 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fa-brands fa-github text-2xl text-gray-200 hover:text-gray-400"></i>
+            {/* <i className="fa-brands fa-github text-2xl text-gray-200 hover:text-gray-400"></i> */}
+            <i className="fa-brands fa-github text-2xl hover:text-gray-400 dark:text-white"></i>
           </a>
           <a
             href="https://www.linkedin.com/in/steven-ruud-4ba07764/"

@@ -34,7 +34,12 @@ export default function Skills() {
       color: "text-yellow-500",
     },
     { name: "Git", iconClass: "fa-brands fa-git-alt", color: "text-red-500" },
-    { name: "GitHub", iconClass: "fa-brands fa-github", color: "text-white" },
+    // { name: "GitHub", iconClass: "fa-brands fa-github", color: "text-black" },
+    {
+      name: "GitHub",
+      iconClass: "fa-brands fa-github",
+      color: "dark:text-white",
+    },
     { name: "AWS", iconClass: "fa-brands fa-aws", color: "text-orange-400" },
     {
       name: "Docker",
