@@ -5,7 +5,7 @@ import { GeistMono } from "geist/font/mono";
 import { Navbar } from "./components/nav";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { baseUrl } from "./sitemap";
+import { baseUrl } from "../public/sitemap";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
