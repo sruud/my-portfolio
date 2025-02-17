@@ -1,5 +1,3 @@
-// import { prefix } from "utils/prefix";
-
 export default function Intro() {
   return (
     <section id="intro" className="max-w-4xl py-16 px-6">
@@ -7,8 +5,6 @@ export default function Intro() {
         {/* GitHub Logo */}
         <img
           src="gh_profile.jpg"
-          // src="/gh_profile.jpg"
-          // src={`${prefix}/gh_profile.jpg`}
           alt="Steven Ruud"
           className="h-40 w-40 rounded-full border-4 border-pink-500 shadow-[0_0_15px_5px_rgba(255,20,147,0.8)]"
         />

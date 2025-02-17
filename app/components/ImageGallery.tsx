@@ -1,17 +1,15 @@
-import { prefix } from "utils/prefix";
-
 export default function ImageGallery() {
   const images = [
-    "/coworker_steve.webp",
-    "/dogcopilot.jpg",
-    "/ethdenver_hang_focus.jpg",
-    "/guitar.jpg",
-    "/djset.jpg",
-    "/workstation.jpg",
-    "/gg_mm_steve.jpg",
-    "/setup_bg_test_lab.webp",
-    "/dj.jpg",
-    "/namm_music_studio_vr.jpg",
+    "coworker_steve.webp",
+    "dogcopilot.jpg",
+    "ethdenver_hang_focus.jpg",
+    "guitar.jpg",
+    "djset.jpg",
+    "workstation.jpg",
+    "gg_mm_steve.jpg",
+    "setup_bg_test_lab.webp",
+    "dj.jpg",
+    "namm_music_studio_vr.jpg",
   ];
 
   return (
@@ -21,7 +19,7 @@ export default function ImageGallery() {
         {images.map((src, index) => (
           <img
             key={index}
-            src={`${prefix}${src}`}
+            src={src}
             alt={`Image ${index + 1}`}
             className="h-auto w-full rounded-lg shadow-md transition-transform duration-300 hover:scale-110"
           />

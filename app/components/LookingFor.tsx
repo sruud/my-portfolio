@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { prefix } from "utils/prefix";
+
 export default function LookingFor() {
   return (
     <>
@@ -32,8 +32,7 @@ export default function LookingFor() {
       </section>
       <section className="max-w-4xl py-8 px-6">
         <Image
-          // src="/steve_and_frens.jpg"
-          src={`${prefix}/steve_and_frens.jpg`}
+          src="steve_and_frens.jpg"
           alt="Steve and dog coworkers"
           width={1458}
           height={1936}
