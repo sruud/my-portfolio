@@ -1,4 +1,4 @@
-import { prefix } from "utils/prefix";
+// import { prefix } from "utils/prefix";
 
 export default function Intro() {
   return (
@@ -6,8 +6,9 @@ export default function Intro() {
       <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start">
         {/* GitHub Logo */}
         <img
+          src="gh_profile.jpg"
           // src="/gh_profile.jpg"
-          src={`${prefix}/gh_profile.jpg`}
+          // src={`${prefix}/gh_profile.jpg`}
           alt="Steven Ruud"
           className="h-40 w-40 rounded-full border-4 border-pink-500 shadow-[0_0_15px_5px_rgba(255,20,147,0.8)]"
         />
