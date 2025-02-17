@@ -59,7 +59,7 @@ export default function Projects() {
             {/* Project Image */}
             {project.image && (
               <img
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${project.image}`}
+                src={project.image}
                 alt={project.name}
                 className="mb-4 rounded-lg"
               />
