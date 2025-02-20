@@ -19,6 +19,7 @@
 .DS_Store
 *.pem
 .vscode
+*.applescript
 
 # debug
 npm-debug.log*
